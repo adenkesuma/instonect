@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     logo: {
-        width: 100,
+        width: 110,
         height: 50
     },
     icon: {
