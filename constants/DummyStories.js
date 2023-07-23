@@ -1,22 +1,22 @@
 export const dummyStories = [
     {
-        user: 'Aden',
+        user: 'Aden kesuma',
         image: require('../assets/avatar/aden.jpg')
     },
     {
-        user: 'Edbert',
+        user: 'Edbert yieson',
         image: require('../assets/avatar/edbert.jpg') 
     },
     {
-        user: 'Raymond',
+        user: 'Raymond tju',
         image: require('../assets/avatar/raymond.jpg')
     },
     {
-        user: 'Ripat',
+        user: 'Ripat al safar',
         image:  require('../assets/avatar/ripat.jpg') 
     },
     {
-        user: 'Dino',
+        user: 'Dino wahyu',
         image: require('../assets/avatar/dino.jpg') 
     },
     {

@@ -9,18 +9,23 @@ const Stories = () => {
         showsHorizontalScrollIndicator={false}
       >
         {dummyStories.map((story, idx) => (
-          <View style={styles.storyContainer}>
+          <View 
+            key={idx}
+            style={styles.storyContainer}
+          >
             <Image 
-              key={idx}
               source={story.image}
               resizeMode='contain'
               style={styles.storyImage}
             />
-            <Text style={styles.storyName}>{story.user}</Text>
+            <Text style={styles.storyName}>
+              {
+                story.user.length > 8 ? story.user.slice(0, 8) + '...' : story.user
+              }
+            </Text>
           </View>
         ))}
       </ScrollView>
-      <Text style={{ color: '#ffffff' }}>Hello world</Text>
     </View>
   )
 }
