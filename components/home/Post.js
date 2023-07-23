@@ -11,6 +11,7 @@ const Post = ({ post }) => {
             <Likes likes={post.likes} />
             <Caption user={post.user} caption={post.caption} />
             <CommentSection comments={post.comments} />
+            <Comments comments={post.comments} />
         </View>
     </View>
   )
@@ -115,6 +116,25 @@ const CommentSection = ({ comments }) => {
     )
 }
 
+const Comments = ({ comments }) => {
+    return (
+        <>
+            {comments.map((comment, idx) => (
+                <View key={idx} style={{ flexDirection: 'row', marginTop: 5 }}>
+                    <Text style={{ color: '#ffffff' }}>
+                        <Text style={{ fontWeight: '700' }}>
+                            {comment.user}
+                        </Text>
+                        <Text>
+                            {' '}{comment.comment}
+                        </Text>
+                    </Text>
+                </View>
+            ))}
+        </>
+    )
+}
+
 const styles = StyleSheet.create({
     container: {
         marginBottom: 30
@@ -197,7 +217,7 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
     userCaption: {
-        fontWeight: '600',
+        fontWeight: '700',
     },
     captionText: {
         marginTop: 5,
