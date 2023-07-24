@@ -5,6 +5,8 @@ import Stories from '../components/home/Stories'
 import { Divider } from 'react-native-elements'
 import { SafeAreaView, StyleSheet, StatusBar } from 'react-native'
 import { posts } from '../constants/DummyPost'
+import BottomTabs from '../components/home/BottomTabs'
+import { bottomTabs } from '../constants/constant'
 
 const HomeScreen = () => {
     return (
@@ -20,6 +22,7 @@ const HomeScreen = () => {
                     <Post post={post} key={idx} />
                 ))}
             </ScrollView>
+            <BottomTabs icons={bottomTabs} />
         </SafeAreaView>
     )
 }
